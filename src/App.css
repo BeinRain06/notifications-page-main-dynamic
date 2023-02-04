@@ -1,0 +1,512 @@
+/* secondo */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,800;1,200&display=swap"); */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  color: #0f0e0e;
+}
+
+h4 {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.my_img {
+  position: relative;
+  top: -0.2rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 45x;
+  height: 45px;
+}
+
+.picture {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+img.picture_commented {
+  border-radius: 5%;
+}
+
+body {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #d6cece;
+  height: 700px;
+  width: 100vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Plus Jakarta Sans", sans-serif; */
+  font-weight: 400;
+  font-size: 12px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_container {
+  position: relative;
+  width: 42%;
+  height: 100%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 2%;
+  z-index: 5;
+}
+
+.show_content {
+  margin: 1rem auto;
+}
+.show_content.addOpacityAnim {
+  transition: all 2s ease-in-out;
+  animation: animOurNot 3s ease-in-out forwards;
+}
+
+/* Button Update Style */
+.btn_update:hover {
+  background: #10302b;
+}
+
+.btn_update.add_animUp {
+  animation: updateMe 4s ease-in-out backwards;
+}
+
+.btn_update {
+  position: absolute;
+  top: calc(2.85rem - 0.65em);
+  left: 1.45rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5%;
+  color: #fff;
+  background: #aa8f8f;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  margin: 1rem 0;
+  z-index: 10;
+}
+
+/* unread box style */
+
+.unread:hover,
+.unread:focus {
+  background: hsl(224, 21%, 14%);
+  transform: scale(0.8);
+}
+
+.unread {
+  position: relative;
+  top: -0.5rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 5%;
+  color: #fff;
+  background: rgb(117, 45, 45);
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+/* button Mark All Read Style */
+
+button.mark_all_read:hover {
+  color: #60df0c;
+  border-bottom: 2px dotted hsl(66, 90%, 19%);
+}
+button.mark_all_read:active,
+button.mark_all_read:focus {
+  color: #60df0c;
+  animation: markReadAnim 350ms ease-in-out forwards;
+  border-bottom: 2px dotted hsl(66, 90%, 19%);
+}
+
+button.mark_all_read {
+  outline: none;
+  border: none;
+  background: transparent;
+  transform: skewX(-10deg);
+  padding-bottom: 0.2rem;
+  border-bottom: 2px dotted rgb(117, 45, 45);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+/* title Noti Style */
+.title h3 {
+  color: #3a3636;
+  transition: all 1.1s ease-in-out;
+  cursor: pointer;
+}
+
+.title h3:hover {
+  color: #4e331a;
+}
+
+.title_page {
+  display: flex;
+  flex-direction: row;
+  width: calc(40vw - 2em);
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.all_users_post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem auto;
+  /* padding-top: 2rem; */
+}
+
+.list_users {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.user_post {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* layer_user style */
+.name_user,
+.topic {
+  font-weight: 500;
+  transform: skewX(0deg) scale(1);
+  transition: all 600ms ease;
+  cursor: pointer;
+}
+.name_user {
+  color: hsl(220, 7%, 9%);
+  font-weight: 800;
+}
+
+.topic {
+  color: hsl(219, 14%, 63%);
+}
+
+.name_user:hover,
+.topic:hover {
+  color: hsl(219, 85%, 26%);
+  font-weight: 800;
+  transform: skewX(10deg) scale(0.9);
+}
+
+.user_post .layer_user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: left;
+  width: calc(100% - 1.8em);
+  gap: 0.5rem;
+}
+.user_post .layer_user p * {
+  margin: 0 0.1rem;
+}
+
+.noti_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  max-width: 40vw;
+  width: calc(100% - 20px);
+  padding: 0.35rem 0.7rem;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  z-index: 3;
+}
+
+.noti_content1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: left;
+  padding: 0.65rem 0;
+  border-radius: 5px;
+  background: #e0e0e0;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.reaction_made {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  min-width: 30vw;
+  width: calc(37vw);
+}
+
+.dot {
+  position: relative;
+  top: 0.2rem;
+  left: calc(0rem + 0.1em);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(177, 21, 21);
+  visibility: visible;
+}
+
+.noti_content1.throw_red_dot {
+  background: #fff;
+}
+
+.noti_content1.throw_red_dot .dot {
+  visibility: hidden;
+  background: transparent;
+}
+
+.theTime {
+  position: absolute;
+  top: calc(1.1rem + 0.8em);
+  left: calc(3.5rem - 0.35em);
+}
+
+.message {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: calc(34 - 1em);
+  padding: 0.5rem 0.6rem;
+  margin-left: calc(3.1rem - 0.5em);
+}
+
+/* .message.addBoxMsg {
+  display: flex;
+} */
+
+.priv_message {
+  max-width: 400px;
+  width: 400px;
+  text-align: left;
+  padding: 0.4rem;
+  border: 1px solid #3a3636;
+}
+
+.attribution {
+  font-size: calc(0.8em);
+  text-align: center;
+  margin: 0 auto;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* animation */
+@keyframes animOurNot {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Screen Tablet Max 626px */
+
+@media (max-width: 960px) {
+  body {
+    font-size: 8px;
+    height: 670px;
+  }
+  .btn_update {
+    position: absolute;
+    top: calc(2.85rem - 2em);
+    left: 1.45rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 8px;
+  }
+  .unread {
+    position: relative;
+    top: -0.5rem;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin: 5px auto;
+  }
+  button.mark_all_read {
+    font-size: 10px;
+  }
+  .dot {
+    position: relative;
+    top: 0;
+    left: calc(0rem + 0.1em);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(177, 21, 21);
+  }
+}
+
+/* Media Screen Max 626px */
+
+@media (max-width: 626px) {
+  body {
+    font-size: 8px;
+    height: 570px;
+  }
+
+  .my_img {
+    position: relative;
+    top: -0.2rem;
+    left: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  .picture {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    width: 18px;
+    height: 18px;
+  }
+  .noti_container {
+    max-width: 41vw;
+    width: calc(100% - 10px);
+    padding: 0.35rem;
+    margin: 0 auto;
+  }
+
+  .reaction_made {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    min-width: 34vw;
+    width: calc(36vw - 1em);
+  }
+
+  .dot {
+    position: relative;
+    top: 0.2rem;
+    left: -0.1rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgb(177, 21, 21);
+  }
+}
+
+/* Media Screen Mobile Max 626px */
+
+@media (max-width: 484px) {
+  body {
+    font-size: 6px;
+    height: 545px;
+  }
+  .btn_update {
+    position: absolute;
+    top: calc(2.85rem - 2.6em);
+    left: calc(1.45rem - 2em);
+    padding: 0.2rem 0.4rem;
+    font-size: 8px;
+  }
+
+  .my_img {
+    position: relative;
+    top: -0.2rem;
+    left: 0;
+    width: 28px;
+    height: 28px;
+  }
+  .unread {
+    width: 12px;
+    height: 12px;
+    margin: 5px auto;
+  }
+  button.mark_all_read {
+    font-size: 8px;
+  }
+
+  .reaction_made {
+    min-width: 32vw;
+    width: calc(36vw);
+  }
+
+  .user_post .layer_user {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 0rem;
+  }
+}
+
+/* Animation Panel */
+
+@keyframes updateMe {
+  0% {
+    background: #10302b;
+  }
+  25% {
+    background: #1a4e46;
+  }
+  50% {
+    background: #227064;
+  }
+  75% {
+    background: #34b9a5;
+  }
+  100% {
+    background: #aa8f8f;
+  }
+}
+@keyframes markReadAnim {
+  0% {
+    transform: skewX(-10deg) scale(0.9);
+  }
+
+  100% {
+    transform: skewX(-10deg) scale(1);
+  }
+}
