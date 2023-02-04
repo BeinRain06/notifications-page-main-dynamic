@@ -45,8 +45,8 @@ _Mobile Screenshot_
 
 ### Links
 
-- Solution URL: [https://github.com/BeinRain06/notifications-page-main.git](https://your-solution-url.com)
-- Live Site URL: [https://beinrain06.github.io/notifications-page-main/](https://your-live-site-url.com)
+- Solution URL: [https://github.com/BeinRain06/notifications-page-main-dynamic.git](https://github.com/BeinRain06/notifications-page-main-dynamic.git)
+- Live Site URL: [https://beinrain06.github.io/notifications-page-main-dynamic/](https://beinrain06.github.io/notifications-page-main-dynamic/)
 
 ## My process
 
@@ -66,22 +66,27 @@ Walk through Live site Url Above and you might see.
 
 ### What I learned
 
-I learn a lot in this project because i was implementing it in React.
-It mwde me revies my knowledges on css alignments box, perform basic rendering zith reactjs, and play with little animations and hover. Hope you will enjoy the looks like...
+This part is a section aside where we allowed us to implement some update based to the re-rendering in DoM of React.
 
-To see how you can add code snippets, see below:
+Hope, this enhance some dynamic effects. I have tried to bring up kind some change, though i felt to animate my design.
+
+I will find a way to make it more attractive with future design.
+
+have a good looks
 
 ### Continued development
 
-I like to ;qke this first page dynamic. The idea is to render notication randomly each time on the button `update` save every page in local Storage, and goes back the the previous page showns in the DOM zhen hitting the `reload` webpage button. I think it can enlight the notification-page much bigger.
+I like to work in other sortable projects lists to see how it will be fun when being done to make list items draggable playing around with these onem and see if it bring also at our eyes goods results . The idea we zill have to try.
 
 ### Useful resources
 
 - [stackOverFlow](https://www.example.com) - Definitely one greatest for beginners and programmers. It is a library of solutions of for people who like coding.
+- [reactjs.org](https://reactjs.org/tutorial/tutorial.html) - help me see how it can be possible to re-render the DOM taking examples to the tic-tac-toe game's
+- [upmostly.com](https://upmostly.com/tutorials/simplifying-react-state-and-the-usestate-hook) - help me understand the usage of `useState` and how to implement it giving me a shot to implement `Read message: button effect` the DOM taking examples to the tic-tac-toe game's
 
 ## Author
 
-- Website - [Ngoeund Raoul Gerard](https://www.your-site.com)
+- Website - [Ngouend Raoul Gerard](https://www.your-site.com)
 - Frontend Mentor - [https://www.frontendmentor.io/profile/yourusername](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [https://www.twitter.com/yourusername](https://www.twitter.com/yourusername)
 - LinkedIn - [https://www.twitter.com/yourusername](https://www.twitter.com/yourusername)
