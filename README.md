@@ -38,10 +38,10 @@ Users should be able to:
 ### Screenshot
 
 _Desktop Screenshot_
-![./DeskTop_Screenshot.png](./screenshot.jpg)
+![./DeskTop_Screenshot.png](./DeskTop_Screenshot.png)
 
 _Mobile Screenshot_
-![./Mobile_Screenshot.png](./screenshot.jpg)
+![./Mobile_Screenshot.png](./Mobile_Screenshot.png)
 
 ### Links
 

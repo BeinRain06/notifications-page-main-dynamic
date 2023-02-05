@@ -47,16 +47,20 @@ class ShowRedDot extends React.Component {
                     className="img_show"
                   />
                 </div>
-                <p>
-                  <span className="name_user">
-                    <strong>{this.props.showus.myName}</strong>
-                  </span>
-                  <span className="my_react">{this.props.showus.myMove}</span>
-                  <span className="topic">{this.props.showus.topic}</span>
-                </p>
-                {this.state.clickedNotiContainer ? (
-                  <div className="dot"></div>
-                ) : null}
+                <ul>
+                  <li>
+                    <span className="name_user">
+                      <strong>{this.props.showus.myName}</strong>
+                    </span>
+                    <span className="my_react">{this.props.showus.myMove}</span>
+                    <span className="topic">{this.props.showus.topic}</span>
+                  </li>
+                  <li>
+                    {this.state.clickedNotiContainer ? (
+                      <div className="dot"></div>
+                    ) : null}
+                  </li>
+                </ul>
               </div>
               <p className="theTime">{this.props.showus.timeLeft}</p>
               <div className="picture">
@@ -86,7 +90,9 @@ const Search = (props) => {
 
   return (
     <div>
-      <button onClick={onClick}>Read Message</button>
+      <button className="read_my_message" onClick={onClick}>
+        Read Message
+      </button>
       {showResult ? <Result myMsg={props.item} /> : null}
     </div>
   );
@@ -226,8 +232,15 @@ class ShowBoardNotification extends React.Component {
         },
       ],
       isClicked: false,
+      clickedAllNotiContainer: true,
     };
   }
+
+  markallNotifReaded = () => {
+    this.setState({
+      clickedAllNotiContainer: !this.state.clickedAllNotiContainer,
+    });
+  };
 
   generateIDs = () => {
     const history = this.state.history[0];
@@ -284,8 +297,12 @@ class ShowBoardNotification extends React.Component {
       ? "show_content"
       : "show_content addOpacityAnim";
 
+    var classRemoveRedDot = this.state.clickedAllNotiContainer
+      ? "main_container"
+      : "main_container removeRedAll";
+
     return (
-      <div className="main_container">
+      <div className={classRemoveRedDot}>
         <div className={classNameContent}>
           <button className="btn_update" onClick={this.generateIDs}>
             <h4>Update</h4>
@@ -298,7 +315,12 @@ class ShowBoardNotification extends React.Component {
               </div>
             </div>
             <div className="mark_noti">
-              <button className="mark_all_read">Mark all as read</button>
+              <button
+                className="mark_all_read"
+                onClick={this.markallNotifReaded}
+              >
+                Mark all as read
+              </button>
             </div>
           </div>
           <Notifications notiValue={boardUser} />
