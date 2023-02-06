@@ -87,6 +87,5 @@ I like to work in other sortable projects lists to see how it will be fun when b
 ## Author
 
 - Website - [Ngouend Raoul Gerard](https://www.your-site.com)
-- Frontend Mentor - [https://www.frontendmentor.io/profile/yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [https://www.twitter.com/yourusername](https://www.twitter.com/yourusername)
-- LinkedIn - [https://www.twitter.com/yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [https://www.frontendmentor.io/profile/BeinRain06](https://www.frontendmentor.io/profile/BeinRain06)
+- Twitter - [https://twitter.com/nest_Ngoueni](https://twitter.com/nest_Ngoueni)
